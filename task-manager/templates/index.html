@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Учет задач отдела</h1>
+
+    <!-- Форма для добавления задач -->
+    <form id="taskForm">
+      <label>Название задачи:</label>
+      <input type="text" id="title" required>
+
+      <label>Описание:</label>
+      <textarea id="description"></textarea>
+
+      <label>Дедлайн:</label>
+      <input type="date" id="deadline" required>
+
+      <label>Приоритет:</label>
+      <select id="priority">
+        <option value="low">Низкий</option>
+        <option value="medium">Средний</option>
+        <option value="high">Высокий</option>
+      </select>
+
+      <button type="submit">Добавить задачу</button>
+    </form>
+
+    <!-- Список задач -->
+    <h2>Активные задачи:</h2>
+    <ul id="taskList"></ul>
+  </div>
+  <script src="/static/script.js"></script>
+</body>
+</html>
